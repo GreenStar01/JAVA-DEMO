@@ -21,6 +21,7 @@ pipeline{
         stage ('Pre-build') {
             steps{
                 bat 'mvn clean compile'
+                bat 'test-compile'
             }
         }
 

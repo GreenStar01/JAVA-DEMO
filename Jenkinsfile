@@ -12,7 +12,7 @@ pipeline{
             steps{
                 echo 'Checking out source Code from Repo'
                 echo "The Environment for Job Execution is ${params.environment}"
-                git 'https://github.com/GreenStar01/JAVA-DEMO.git'
+                git branch: 'main', credentialsId: '6fcf4fdc-2307-4ed0-aece-f277e0c30202', url: 'https://github.com/GreenStar01/JAVA-DEMO.git'
             }
 
         }

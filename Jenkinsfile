@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools{
-        Maven  'Maven'
+        maven  'M3'
     }
     parameters{
         string( defaultValue: 'Test', name: 'environment')

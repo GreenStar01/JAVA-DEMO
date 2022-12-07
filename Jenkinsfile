@@ -40,13 +40,17 @@ pipeline{
                 bat 'mvn package '
             }
         }
-
-        stage ('Archive Output'){
+        stage ('Integration-Test') {
             steps{
-                archiveArtifacts artifacts: '**/*.war', onlyIfSuccessful: true
+                bat ('mvn integration-test')
             }
         }
-            
+        stage ('Archive Output'){
+            steps{
+                archiveArtifacts artifacts: '**/*.jar', onlyIfSuccessful: true
+            }
+        }
+
 
 
     }

@@ -46,13 +46,7 @@ pipeline{
                 archiveArtifacts artifacts: '**/*.war', onlyIfSuccessful: true
             }
         }
-            post{
-                always{
-                    junit{
-                        testResults: '*test-reports/.xml'
-                    }
-                }
-            }
+            
 
 
     }
